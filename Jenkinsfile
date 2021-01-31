@@ -13,7 +13,7 @@ pipeline {
             steps{
                 sh "rsync  -razh --update /var/lib/jenkins/workspace/tutor/tutorgigs.io/ /var/www/html/tutorgigs.io/"
                 sh "sudo chown root:root /var/www/html/tutorgigs.io/ -R"
-                sh "cd /var/www/html/tutorgigs.io/*  && ls -lahrt" 
+                sh "cd /var/www/html/tutorgigs.io/  && ls -lahrt" 
             }
         }
 }
