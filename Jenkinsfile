@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Deploy the code') {
             steps{
-                sh "cp -rf $WORKSPACE/tutorgigs.io /var/www/html/tutorgigs.io"
-                sh "cd /var/www/html/tutorgigs.io  && ls -lahrt"
+                sh "cp -rf $WORKSPACE/tutorgigs.io/* /var/www/html/tutorgigs.io/"
+                sh "cd /var/www/html/tutorgigs.io/*  && ls -lahrt"
             }
         }
 }
