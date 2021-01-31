@@ -2,7 +2,7 @@
 pipeline {
     agent any
     
-    stage {
+    stages {
         stage('Pull the code') {
             steps{
                 sh "cd  $WORKSPACE"
