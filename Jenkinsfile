@@ -13,6 +13,9 @@ pipeline {
             steps{
                 sh "sudo rsync  -razh --update /var/lib/jenkins/workspace/tutor/tutorgigs.io/ /var/www/html/tutorgigs.io/"
                 sh "sudo chown root:root /var/www/html/tutorgigs.io/ -R"
+                
+                sh "sudo rsync  -razh --update /var/lib/jenkins/workspace/tutor/tutorgigs.io/ /var/www/html/dev/"
+                sh "sudo chown root:root /var/www/html/dev/ -R"
                
             }
         }
