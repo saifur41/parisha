@@ -9,19 +9,20 @@ pipeline {
                 sh " ls -lahrt"
             }
         }
-       /* stage('Deploy the code') {
+        stage('Deploy the code') {
             steps{
-                sh "cp -RTvf $WORKSPACE/tutorgigs.io/ /var/www/html/tutorgigs.io/"
+                sh "sudo rsync  -razh --update $WORKSPACE/tutor/tutorgigs.io/ /var/www/html/tutorgigs.io/"
                 sh "sudo chown root:root /var/www/html/tutorgigs.io/ -R"
                 sh "cd /var/www/html/tutorgigs.io/*  && ls -lahrt" 
             }
         }
 }
-    post {
+   /* post {
         always {
             cleanWs()
             }   
-            */
-    } 
+            
+    }
+    */
     
 }
