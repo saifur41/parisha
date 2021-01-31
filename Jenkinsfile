@@ -1,7 +1,7 @@
 
 pipeline {
     agent any
-    }
+    
     stage {
         stage('Pull the code') {
             steps{
