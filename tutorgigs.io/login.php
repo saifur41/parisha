@@ -172,9 +172,9 @@ else if($role =="teacher")
     <section class="features-icons bg-light text-center">
       <div class="container">
       <form class="form-signin" method="POST">
-     
-      
+
       <h2 class="form-signin-heading text-primary text-center">Please Login 7</h2>
+
        <?php
        echo (isset($_SESSION['suspended']))?$_SESSION['suspended']:NULL;
        
